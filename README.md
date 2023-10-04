@@ -7,4 +7,4 @@ OSS Practice SkyCollection Activities
 - 이건희 통계학과
 - 김지우 통계학과
 - 왜 알람 안오는데
-- 알
+- 알림티비 
