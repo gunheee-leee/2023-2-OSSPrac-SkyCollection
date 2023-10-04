@@ -1,7 +1,10 @@
 # 2023-2-OSSPrac-SkyCollection
 OSS Practice SkyCollection Activities
 
-MLAC
-Machine Learning Access Control
+팀장
+임형준
 
-MLAC Example
+팀원
+김지우
+김하늘
+이건희
