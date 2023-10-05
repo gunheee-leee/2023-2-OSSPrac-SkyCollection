@@ -6,3 +6,4 @@ OSS Practice SkyCollection Activities
 - 김하늘 통계학과
 - 이건희 통계학과
 - 김지우 통계학과
+- 이제 알림 뜨낭 ~~~!
