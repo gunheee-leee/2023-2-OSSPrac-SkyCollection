@@ -1,4 +1,4 @@
-# 2023-2-OSSPrac-SkyCollection
+# 2023-2-OSSPrac-SkyCollection-08
 OSS Practice SkyCollection Activities
 
 # Teams
@@ -6,4 +6,3 @@ OSS Practice SkyCollection Activities
 - 김하늘 통계학과
 - 이건희 통계학과
 - 김지우 통계학과
-- 이제 알림 뜨낭 ~~~!
