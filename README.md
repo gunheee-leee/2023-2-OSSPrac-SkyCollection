@@ -8,7 +8,7 @@ OSS Practice SkyCollection Activities
 - 김지우 통계학과
 
 # requirements
-협업용 가상환경 구축 (powershell)
+협업용 가상환경 구축 (powershell)<br>
 폴더 이동     : cd prac7<br>
 가상환경 생성 : python -m venv myflask<br>
 가상환경 실행 : myflask/Scripts/activate.ps1<br>
