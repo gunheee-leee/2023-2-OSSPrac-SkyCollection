@@ -8,6 +8,6 @@ OSS Practice SkyCollection Activities
 - 김지우 통계학과
 
 # requirements
-prac7 (powershell)
-가상환경 실행 : myflask/Scripts/activate.ps1
+prac7 (powershell)<br>
+가상환경 실행 : myflask/Scripts/activate.ps1<br>
 코드 실행 : python main.py
