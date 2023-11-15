@@ -5,4 +5,4 @@ services:
     build: .
     image: gksmf/flask:3.0
     ports:
-      - "7338:5000"
+      - "7331:5000"
