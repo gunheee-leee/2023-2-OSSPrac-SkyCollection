@@ -9,6 +9,21 @@
         <p><b>Gender</b></p>
         <label><input type="radio" id='Gender' name="Gender" value="Male">Male</label>
         <label><input type="radio" id='Gender' name="Gender" value="Female">Female</label>
+        <label>Email Domain:
+            <select name=“email_domain”>
+                <option value=“example.com”>example.com</option>
+                <option value=“domain2.com”>domain2.com</option>
+            </select>
+        </label><br>
+        <label>Email Suffix (Choose up to 5):
+            <select name=“email_suffix[]” multiple>
+                <option value=“naver.com”>1</option>
+                <option value=“daum.net”>2</option>
+                <option value=“hanmail.net”>3</option>
+                <option value=“gmail.com”>4</option>
+                <option value=“dgu.ac.kr”>5</option>
+            </select>
+        </label>
         <p><b>Programming Languages</b></p>
         <label><input type="checkbox" name="PL" value="Python">Python</label>
         <label><input type="checkbox" name="PL" value="Java">Java</label>
