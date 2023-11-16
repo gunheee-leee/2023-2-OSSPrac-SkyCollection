@@ -3,6 +3,6 @@ version: '3'
 services:
   app:
     build: .
-    image: gksmf/flask:3.0
+    image: gksmf/skycollection:3.0
     ports:
-      - "7331:5000"
+      - "7338:5000"
