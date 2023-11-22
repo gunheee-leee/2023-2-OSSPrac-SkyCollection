@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    image: ${DOCKER_USR}/prac12
+    ports:
+      - "7338:5000"
