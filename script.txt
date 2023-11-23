@@ -11,25 +11,34 @@ pipeline {
 
     stages {
         stage('Prepare') {
-	 agent any 
+	        agent any 
 	
             steps {							
-		git url : 'https://github.com/CSID-DGU/2023-2-OSSPrac-SkyCollection-08.git',
+		        git url : 'https://github.com/CSID-DGU/2023-2-OSSPrac-SkyCollection-08.git',
 						branch : 'main',
 						credentialsId: 'git-hub'
             }
         }
 
-
         stage('Build') {
-            
             steps {
-                dir('/var/jenkins_home/2023-2-OSSPrac-SkyCollection-08'){
-                    sh 'git pull origin main'
+                script {
+                    dir('/var/jenkins_home/'){
+                        def projectDir = '/var/jenkins_home/2023-2-OSSPrac-SkyCollection-08'
+                        def isDirectoryExist = fileExists(projectDir)
 
-                    sh 'docker compose build web'
+                        if (!isDirectoryExist) {
+                            // If the directory does not exist, clone the repository
+                            sh 'git clone https://github.com/CSID-DGU/2023-2-OSSPrac-SkyCollection-08.git'
+                        }
+                    }
+
+                    dir('/var/jenkins_home/2023-2-OSSPrac-SkyCollection-08'){ 
+                        sh 'git pull origin main'
+                        sh 'docker compose build web'
+                    }
                 }
-           }
+            }
         }
 
         stage('Tag') {
