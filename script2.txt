@@ -1,0 +1,50 @@
+pipeline {
+    agent any  
+
+	triggers {
+			pollSCM('*/3 * * * *')
+	} 
+
+    environment {
+        DOCKER = credentials('docker-hub')    
+    } 
+
+    stages {
+        stage('Prepare') {
+	        agent any 
+	
+            steps {							
+		        git url : 'https://github.com/CSID-DGU/2023-2-OSSPrac-SkyCollection-08.git',
+						branch : 'main',
+						credentialsId: 'git-hub'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    dir('/var/jenkins_home/workspace/prac12@2'){
+                        sh 'docker compose build web'
+                    }
+                }
+            }
+        }
+
+        stage('Tag') {
+            steps {
+                script {
+                    sh "docker tag ${DOCKER_USR}/prac12 ${DOCKER_USR}/prac12:${BUILD_NUMBER}"
+                }
+            }
+        }
+
+        stage('Push') {
+            steps {
+                script {
+                    sh "docker login -u $DOCKER_USR -p $DOCKER_PSW"
+		            sh "docker push ${DOCKER_USR}/prac12:${BUILD_NUMBER}"
+                }
+            }
+        }
+    }
+}
