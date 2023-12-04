@@ -23,18 +23,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    dir('/var/jenkins_home/'){
-                        def projectDir = '/var/jenkins_home/2023-2-OSSPrac-SkyCollection-08'
-                        def isDirectoryExist = fileExists(projectDir)
-
-                        if (!isDirectoryExist) {
-                            // If the directory does not exist, clone the repository
-                            sh 'git clone https://github.com/CSID-DGU/2023-2-OSSPrac-SkyCollection-08.git'
-                        }
-                    }
-
-                    dir('/var/jenkins_home/2023-2-OSSPrac-SkyCollection-08'){ 
-                        sh 'git pull origin main'
+                    dir('/var/jenkins_home/workspace/prac12@2'){
                         sh 'docker compose build web'
                     }
                 }
